@@ -4,7 +4,7 @@ int main(int argc, char *argv[])
 {
     // create two arrays we care about
     int ages[] = {23, 43, 12, 89, 2};
-    char *names[] = {
+    char* names[] = {
         "Alan", "Frank",
         "Mary", "John", "Lisa"
     };
@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
     printf("---\n");
 
     // set up the pointers to the start of the arrays
-    int *cur_age = ages;
-    int **cur_name = names;
+    int* cur_age = ages;
+    char** cur_name = names;
 
     // second way using pointers
     for(i = 0; i < count; i++) {
