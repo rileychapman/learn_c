@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -36,7 +37,7 @@ void die(const char *message)
 void Address_print(struct Address *addr)
 {
     printf("%d %s %s\n",
-            addr->id, addr_name, addr->email);
+            addr->id, addr->name, addr->email);
 }
 
 void Database_load(struct Connection *conn)
