@@ -5,7 +5,7 @@ typedef enum {
     NORTH, SOUTH, EAST, WEST
 } Direction;
 
-typdef struct {
+typedef struct {
     char* description;
     int (*init)(void *self);
     void (*describe)(void *self);
@@ -18,7 +18,7 @@ int Object_init(void *self);
 void Object_destroy(void *self);
 void Object_describe(void *self);
 void *Object_move(void *self, Direction direction);
-void Object_attack(void *self, int damage);
+int Object_attack(void *self, int damage);
 void *Object_new(size_t size, Object proto, char *description);
 
 #define NEW(T,N) Object_new(sizeof(T), T##Proto, N)
